@@ -1,6 +1,9 @@
 ## `Redis란 무엇인가?`
 
 백엔드 채용공고를 보면 사용기술란에서 자주 마주했을 기술인 `Redis`.
+![redis]
+<img width="556" alt="스크린샷 2022-11-15 오후 3 54 57" src="https://user-images.githubusercontent.com/80196373/201853514-73ec811d-4cc3-4711-9fa9-4c74c4dc7b37.png">
+
 그렇다면 `Redis` 란 무엇이며, 왜 많은 기업들이 사용하는걸까?
 
 [redis](https://redis.io/docs/about/)
