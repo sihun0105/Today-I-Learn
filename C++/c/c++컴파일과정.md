@@ -16,5 +16,5 @@
 - 어셈블리과정 : 오브젝트 코드 파일로 변환합니다. 오브젝트 코드는 0과 1로 이루어진 이진 코드입니다. 그리고 아직 주소 정보가 확정되지 않은 상태입니다.
 - 링 킹 : 오브젝트 파일들을 묶어서 실행 코드 파일로 변환합니다. 운영체제가 로딩할 수 있도록 주소 정보를 할당한 파일을 만들어 냅니다. 따라서 링커는 운영체제에 의존적입니다.
 
-우리가 `Sample.c` 파일을 작성하고 `gcc -o Sample Sample.c`명령을 통해 컴파일 과정을 거쳐 Sample(executables)파일은 만들어진다.
+우리가 `Sample.c` 파일을 작성하고 `gcc -o Sample Sample.c`명령을 통해 컴파일 과정을 거쳐 `Sample(executables)`파일은 만들어진다.
 ![image1](https://user-images.githubusercontent.com/80196373/203785396-daa66dde-2bf6-45d0-a5ef-3e366cab1513.png)
