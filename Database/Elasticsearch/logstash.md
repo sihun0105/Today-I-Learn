@@ -7,3 +7,17 @@
 Logstash : input,filter,ourter로 구성되며 실시간 파이프라인 기능을 가진 오픈소스 데이터 수집
 
 
+### filter
+mutate 필터를 사용하면 필드에서 일반 변형을 수행할 수 있습니다. 이벤트에서 필드의 이름을 바꾸고 바꾸고 수정할 수 있습니다.
+```bash
+filter {
+    mutate {
+        split => { "hostname" => "." }
+        add_field => { "shortHostname" => "%{[hostname][0]}" }
+    }
+
+    mutate {
+        rename => {"shortHostname" => "hostname"}
+    }
+}
+```
