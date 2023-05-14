@@ -17,7 +17,7 @@ const graph = {
   P: ["M"]
 };
 
-const bfs = (graph, start) => {
+const dfs = (graph, start) => {
 
     const checked = [];    // 탐색 완료 데이터
     const willCheck = [];  // 탐색 예정 데이터
@@ -36,5 +36,5 @@ const bfs = (graph, start) => {
     return checked;
 }
 
-console.log(bfs(graph, "A"));
+console.log(dfs(graph, "A"));
 // ['A', 'B', 'D', 'F', 'H', 'L', 'I', 'M', 'P', 'C', 'E', 'G', 'J', 'N', 'K', 'O']
