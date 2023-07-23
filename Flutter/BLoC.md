@@ -74,3 +74,10 @@ MultiBlocProvider(
   child: ChildA(),
 )
 ```
+
+## BlocListener
+Bloc 의 상태 변경에 대한 응답으로 리스너를 호출하는 위젯
+navigation, SnackBar, Dialog 등과 같이 상태 변경당 한 번 발생해야 하는 기능에 사용해야 한다고 합니다.
+create 해준 Bloc 이 없다면 bloc 을 받아 사용하는 방법도 있습니다.
+listenWhen 을 통해 이전 state 와 현재 state 를 가져올 수 있고 bool 을 리턴합니다.
+listenWhen 이 false 를 리턴하면 builder 를 호출하지 않습니다.
