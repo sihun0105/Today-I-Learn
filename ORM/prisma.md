@@ -15,3 +15,63 @@ TypeORM은 보다 SQL에 가깝게 설계되어 있고, Prisma는 개발자의 �
 그렇다고 Prisma로 raw query를 날리지 못한다는 것은 아니다. 필요에 따라 raw query또한 날릴수 있다.
 
 또한 TypeORM의 최대 단점인 컴파일 환경에서 에러를 검출하지 못하고, 런타임 환경에서 에러가 발생하게 되는것을 막을 수 있다.
+
+### Create
+
+```typescript
+const user = await prisma.user.create({
+  data: {
+    email: "elsa@prisma.io",
+    name: "Elsa Prisma",
+  },
+});
+```
+
+### Read
+
+```typescript
+// By unique identifier
+const user = await prisma.user.findUnique({
+  where: {
+    email: "elsa@prisma.io",
+  },
+});
+
+// By ID
+const user = await prisma.user.findUnique({
+  where: {
+    id: 99,
+  },
+});
+```
+
+### Update
+
+```typescript
+const updateUser = await prisma.user.update({
+  where: {
+    email: "viola@prisma.io",
+  },
+  data: {
+    name: "Viola the Magnificent",
+  },
+});
+```
+
+### Delete
+
+```typescript
+const deleteUser = await prisma.user.delete({
+  where: {
+    email: "bert@prisma.io",
+  },
+});
+
+const deleteUsers = await prisma.user.deleteMany({
+  where: {
+    email: {
+      contains: "prisma.io",
+    },
+  },
+});
+```
