@@ -34,3 +34,7 @@ export class User {
   password: string;
 }
 ```
+
+하지만 Exclude을 사용하여 클래스에 명시하는 방법은 User 클래스를 사용하는 전체 라우터에 영향을 주기 때문에 유연한 대응에 어려움이 있을 수 있다.
+
+이러한 상황에서는 `ClassSerializerInterceptor` 보다 커스텀 `interceptor`을 사용하는게 유연한 대응을 할 수 있을 것이다.
