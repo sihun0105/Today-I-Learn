@@ -66,3 +66,33 @@ just after subscribe
 got value 4
 done
 ```
+
+함수의 일반화로서 관찰 가능
+
+대중적인 주장과는 달리, Observables는 EventEmitters와 같지 않으며 여러 값에 대한 Promises와 같지도 않다. Observables는 경우에 따라 RxJS Subjects를 사용하여 멀티캐스트될 때 EventEmitters처럼 작동할 수 있지만, 일반적으로 EventEmitters처럼 작동하지 않습니다.
+
+```javascript
+import { Observable } from 'rxjs';
+
+const foo = new Observable((subscriber) => {
+  console.log('Hello');
+  subscriber.next(42);
+  subscriber.next(100); // "return" another value
+  subscriber.next(200); // "return" yet another
+});
+
+console.log('before');
+foo.subscribe((x) => {
+  console.log(x);
+});
+console.log('after');
+```
+```
+"before"
+"Hello"
+42
+100
+200
+"after"
+300
+```
