@@ -62,3 +62,7 @@
 | logs         | 컨테이너의 로그를 화면에 출력                             |
 | cluster-info | 클러스터의 상세 정보를 화면에 출력                        |
 | top          | CPU,메모리,스토리지 등 시스템 자원을 확인                 |
+
+
+#### 커맨드 예시
+kubectl scale deployment [디플로이먼트 이름] --replicas=[수정할 replica 수]
