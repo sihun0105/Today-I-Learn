@@ -120,3 +120,16 @@ verbose = true
 ```
 4.```./monstache -f monstache.toml``` 명령을 사용해 실행시킨다.
 5. 끝
+
+
+### soft delete 옵션
+[[script]]
+namespace = "db.collection"
+script = """
+module.exports = function(doc) {
+    if (!!doc.deletedAt) {
+        return false;
+    }
+    return true;
+}
+"""
