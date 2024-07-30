@@ -27,3 +27,17 @@ Go 채널은 수신자와 송신자가 서로를 기다리는 속성때문에, �
 exampleChannel채널에 true를 보내면, 수신자 메인루틴은 이를 받고 프로그램을 끝내게 만들 수 있다.
 
 Go 채널은 2가지의 채널이 있는데, Unbuffered Channel과 Buffered Channel이 있다. 위의 예제에서의 Go 채널은 Unbuffered Channel로서 이 채널에서는 하나의 수신자가 데이타를 받을 때까지 송신자가 데이타를 보내는 채널에 묶여 있게 된다. 하지만, Buffered Channel을 사용하면 비록 수신자가 받을 준비가 되어 있지 않을 지라도 지정된 버퍼만큼 데이타를 보내고 계속 다른 일을 수행할 수 있다. 버퍼 채널은 make(chan type, N) 함수를 통해 생성되는데, 두번째 파라미터 N에 사용할 버퍼 갯수를 넣는다. 예를 들어, make(chan int, 10)은 10개의 정수형을 갖는 버퍼 채널을 만든다.
+
+버퍼 채널을 이용하지 않는 경우, 아래와 같은 코드는 에러 (fatal error: all goroutines are asleep - deadlock!) 를 발생시킨다. 왜냐하면 메인루틴에서 채널에 1을 보내면서 상대편 수신자를 기다리고 있는데, 이 채널을 받는 수신자 Go루틴이 없기 때문이다.
+
+```go
+package main
+ 
+import "fmt"
+ 
+func main() {
+  c := make(chan int)
+  c <- 1   //수신루틴이 없으므로 데드락 
+  fmt.Println(<-c) //코멘트해도 데드락 (별도의 Go루틴없기 때문)
+}
+```
