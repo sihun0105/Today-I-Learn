@@ -65,3 +65,30 @@ type T8 = ReturnType<Function>;
 
 type T8 = any;
 ```
+
+InstanceType<Type>
+Type의 생성자 함수의 인스턴스 타입으로 구성된 타입을 생성합니다.
+
+```typescript
+class C {
+  x = 0;
+  y = 0;
+}
+ 
+type T0 = InstanceType<typeof C>;
+     
+type T0 = C
+type T1 = InstanceType<any>;
+     
+type T1 = any
+type T2 = InstanceType<never>;
+     
+type T2 = never
+type T3 = InstanceType<string>;
+//Type 'string' does not satisfy the constraint 'abstract new (...args: any) => any'.
+     
+type T3 = any
+type T4 = InstanceType<Function>;
+Type 'Function' does not satisfy the constraint 'abstract new (...args: any) => any'.
+//Type 'Function' provides no match for the signature 'new (...args: any): any'.
+```
