@@ -92,3 +92,15 @@ type T4 = InstanceType<Function>;
 Type 'Function' does not satisfy the constraint 'abstract new (...args: any) => any'.
 //Type 'Function' provides no match for the signature 'new (...args: any): any'.
 ```
+
+NonNullable<Type>
+Type에서 null과 정의되지 않은 것(undefined)을 제외하고 타입을 생성합니다.
+```typescript
+type T0 = NonNullable<string | number | undefined>;
+     
+//type T0 = string | number
+type T1 = NonNullable<string[] | null | undefined>;
+     
+//type T1 = string[]
+```
+
