@@ -97,7 +97,6 @@ NonNullable<Type>
 Type에서 null과 정의되지 않은 것(undefined)을 제외하고 타입을 생성합니다.
 ```typescript
 type T0 = NonNullable<string | number | undefined>;
-     
 //type T0 = string | number
 type T1 = NonNullable<string[] | null | undefined>;
      
