@@ -17,10 +17,9 @@ Union에 할당할 수 있는 모든 유니온 멤버를 Type에서 가져와서
 
 ```typescript
 type T0 = Extract<"a" | "b" | "c", "a" | "f">;
-
 type T0 = "a";
-type T1 = Extract<string | number | (() => void), Function>;
 
+type T1 = Extract<string | number | (() => void), Function>;
 type T1 = () => void;
 ```
 
