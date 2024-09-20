@@ -1,0 +1,1 @@
+BPF(Berkley packet filter)는 패킷 필터 기능만 하는 것이 아니라 genric하고 유연한 instruction set을 제공하여 단순한 필터 이상의 일들을 할 수 있습니다.
