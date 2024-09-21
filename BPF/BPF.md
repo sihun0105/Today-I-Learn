@@ -1,2 +1,2 @@
-BPF(Berkley packet filter)는 패킷 필터 기능만 하는 것이 아니라 genric하고 유연한 instruction set을 제공하여 단순한 필터 이상의 일들을 할 수 있습니다.
+BPF(Berkley packet filter)는 패킷 필터 기능만 하는 것이 아니라 generic하고 유연한 instruction set을 제공하여 단순한 필터 이상의 일들을 할 수 있습니다.
 작성된 BPF 프로그램은 여러 hook point에서 안전하게 실행할 수 있습니다. 리눅스 커널의 많은 서브 시스템들은 BPF가 실행할 수 있는 hook point를 제공하며, 대표적으로 분야로 networking, tracing, security가 있습니다.
