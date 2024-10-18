@@ -1,3 +1,6 @@
+DataType은 프로그램을 구성하는 가장 기본적인 메모리 구조에 대한 정의다. 
+어떤 DataType을 선택하느냐에 따라서 최적화된 프로그래밍이 가능하다.
+
 rune : 유니코드(UTF-8)을 표현하는 타입
 16 bit로 표현되는 UTF-16이 아닌, 8 bit로 표현되는 UTF-8 (8-bit Unicode Transformation Format) 인코딩 방식을 사용한다는 것을 주의한다.
 유니코드 인코딩에서 한글은 3byte를 사용하고, 영어는 1byte를 사용하는 것을 주의한다.
