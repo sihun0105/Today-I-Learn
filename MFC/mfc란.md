@@ -1,0 +1,1 @@
+mfc란 Microsoft Foundation Class의 약자로 마이크로소프트에서 만든 Win32 및 COM API 를 C++로 둘러싼 Library입니다.
