@@ -1,5 +1,7 @@
 mfc란 Microsoft Foundation Class의 약자로 마이크로소프트에서 만든 Win32 및 COM API 를 C++로 둘러싼 Library입니다.
 
+Window API: 마이크로 소프트 윈도우 운영체제들이 사용하는 API이며, C/C++ 프로그램에서 직접 운영체제와 상호 작용할 수 있도록 만들어졌으며, 그보다 더 낮은 수준의 제어는 Ntdll.dll을 사용한 낮은 수준의 DLL로 가능합니다. 
+
 MFC 템플릿
 MFC 응용 프로그램
 MFC 애플리케이션은 Microsoft Foundation Class(MFC) 라이브러리를 기반으로 하는 Windows용 실행 가능한 애플리케이션입니다. MFC 애플리케이션을 만드는 가장 쉬운 방법은 MFC 애플리케이션 마법사를 사용하는 것입니다.
